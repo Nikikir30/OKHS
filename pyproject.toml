@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=80,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "okhs-research"
+version = "0.2.0"
+description = "Occupation kernel Hilbert space forecasting for fractional dynamics"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "numpy>=2.2,<2.3",
+  "scipy>=1.15,<1.16",
+  "scikit-learn>=1.6,<1.7",
+  "torch>=2.6,<2.7",
+  "tqdm>=4.66,<4.67",
+  "matplotlib>=3.10,<3.11",
+  "pymonad>=2.4,<2.5",
+  "pycaputo>=0.10,<0.11",
+  "pymittagleffler>=0.2,<0.3",
+  "tensorboard>=2.20,<2.21",
+]
+
+[project.scripts]
+okhs-benchmark = "okhs.experiments.benchmark:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
